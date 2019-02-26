@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'pry'
+
 require_relative "../lib/user.rb"
 require_relative "../lib/teacher.rb"
 require_relative "../lib/student.rb"
@@ -13,8 +15,19 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
+random2 = avi.teach
+random3 = avi.teach
 
 steve.learn(some_knowledge)
+steve.learn(random2)
+steve.learn(random3)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Gordon"
+
+binding.pry
+0
